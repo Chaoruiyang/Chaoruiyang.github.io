@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改样式</title>
+		<link rel="stylesheet" type="text/css" href="changestyle.css"/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="ribbon.css" />
+		<link rel="stylesheet" type="text/css" href="对音频的样式修改.css"/>
+		<script src="wavesurfer.js"></script>
+		<script src="wavesurferCursor.js"></script>
+	</head>
+	<body>
+		<!-- 提示选择屏幕尺寸 -->
+		<!-- <div class="confirm_screen_size">
+			<p><span id="tip">输入屏幕尺寸</span></p>
+			<p>
+				屏幕长:
+				<input type="number" name="" id="screen_len" value="" />
+				像素
+			</p>
+			<p>
+				屏幕宽:
+				<input type="number" name="" id="screen_wid" value="" />
+				像素
+			</p>
+			<button type="button" id="confirm_size">确定</button>
+		</div> -->
+		
+		<!-- 导入数据 -->
+		<!-- <div class="upload_data">
+			<i class="upload_btn_backgrond"></i>
+			<button type="button">Import data</button>
+		</div> -->
+		
+		<!-- 预览区域 -->
+		<div class="show_outside">
+			<div class="show">
+				<div class="btn">
+					<button type="button" id="yulan">全屏预览</button>
+					<button type="button" id="quit">退出全屏</button>
+					<button id="start" data-action="play" type="button">paly/pause</button>
+				</div>
+			</div>
+		</div>
+		<!-- 调整区域 -->
+		<div class="modify">
+			<ul class="modify_list">
+				<li class="modify_list_item " style="margin-top: 0;">
+					<p class="modify_list_item_content title">文本样式调整</p>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体</p>
+					<select name="font_family" class="modify_list_item_content global font  select">
+						<option value="Microsoft YaHei">微软雅黑</option>
+						<option value ="arial black">arial black</option>
+						<option value ="楷体">楷体</option>
+					</select>
+				</li>
+				
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体大小</p>
+					<input class="modify_list_item_content font global"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体粗细</p>
+					<input class="modify_list_item_content font global"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字间距</p>
+					<input class="modify_list_item_content font global"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体颜色</p>
+					<input class="modify_list_item_content font global" type="color"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">透明度</p>
+					<input class="modify_list_item_content font global"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">行间距</p>
+					<input class="modify_list_item_content font global"></input>
+				</li>
+				
+				<!-- <li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体大小</p>
+					<input class="modify_list_item_content font global"  type="range" min="0" max="100" value="0" step="1"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体粗细</p>
+					<input class="modify_list_item_content font global" type="range" min="100" max="1000" value="0" step="100"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字间距</p>
+					<input class="modify_list_item_content font global" type="range" min="0" max="30" value="0" step="1"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">字体颜色</p>
+					<input class="modify_list_item_content font global" type="color"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">透明度</p>
+					<input class="modify_list_item_content font global" type="range" min="0" max="1" value="0" step="0.1"></input>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">行间距</p>
+					<input class="modify_list_item_content font global" type="range" min="0" max="50" value="0" step="1"></input>
+				</li> -->
+				
+				
+				<!-- <li class="modify_list_item">
+					<p class="modify_list_item_content font ">8变换时间</p>
+					<input class="modify_list_item_content font global" type="range" min="0" max="5" value="0" step="0.1"></input>
+					<input class="modify_list_item_content font current"></input>
+				</li>
+				
+				<li class="modify_list_item">
+					<p class="modify_list_item_content font ">9延时变换</p>
+					<input class="modify_list_item_content font global" type="range" min="0" max="5" value="0" step="0.1"></input>
+					<input class="modify_list_item_content font current"></input>
+				</li> -->
+				
+				
+				<li class="modify_list_item">
+					<p class="modify_list_item_content checkbox  two_items">10文本居中</p>
+					<input class="modify_list_item_content checkbox two_items" type="checkbox"></input>
+				</li>
+				<!-- <li class="modify_list_item">
+					<p class="modify_list_item_content two_items">11纵向平移</p>
+					<input class="modify_list_item_content range two_items" type="range" min="0" max="100%" value="0" step="0.2"></input>
+				</li> -->
+				
+				<li class="modify_list_item">
+					<p class="modify_list_item_content two_items">11纵向平移</p>
+					<input class="modify_list_item_content range two_items"></input>
+				</li>
+			</ul>
+			<ul class="modify_list">
+				<!-- 背景设置 -->
+				<li class="modify_list_item">
+					<p class="modify_list_item_content title">背景样式调整</p>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content  two_items">背景颜色</p>
+					<input class="modify_list_item_content background two_items" type="color" value="#000000" />
+				</li><!-- 
+				<li class="modify_list_item">
+					<p class="modify_list_item_content  two_items">背景图片</p>
+					<input class="modify_list_item_content background two_items" type="url" value="#000" />
+				</li> -->
+			</ul>
+			<ul class="modify_list">
+				<li class="modify_list_item">
+					<p class="modify_list_item_content title">遮罩块样式调整</p>
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content two_items">遮罩块颜色</p>
+					<input class="modify_list_item_content mask_color two_items" type="color" name="" id="" value="#000000" />
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content ">遮罩块高度：</p>
+					<input class="modify_list_item_content range two_items" type="range" min="0" max="50" value="45" />
+				</li>
+				<li class="modify_list_item">
+					<p class="modify_list_item_content ">遮罩块透明度：</p>
+					<input class="modify_list_item_content range two_items" type="range" min="0" max="100" value="100" />
+				</li>
+			</ul>
+			
+		</div>
+		<!-- 音频区域 -->
+		<div class="time">
+			<div class="time_inside">
+			<div class="container" style="height: 100%;">
+				<div id="waveform"  style="height: 100%;">
+					 
+				</div>
+			</div>
+			<div class="control_tool">
+				<label for="zoom_num">缩放</label>
+				<input type="range" min="100" max="1000" id="zoom_num" value="200" />
+			</div>
+			</div>
+		</div>
+		<!-- <div class="audio_edit">
+			<div class="container">
+				<div id="waveform">
+					 
+				</div>
+			</div>
+			<div class="control_tool">
+				<label for="zoom_num">缩放</label>
+				<input type="range" min="100" max="1000" id="zoom_num" value="200" />
+			</div>
+		</div> -->
+		<div class="bug">
+			<h1>Bug</h1>
+			<h2>How to transimit files between different pages?</h2>
+		</div>
+	</body>
+	<script src="changestyle.js" type="text/javascript" charset="utf-8"></script>
+</html>
